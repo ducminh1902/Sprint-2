@@ -8,6 +8,7 @@ import { LoginComponent } from './component/login/login.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { CartComponent } from './component/cart/cart.component';
 import {HttpClientModule} from "@angular/common/http";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,8 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

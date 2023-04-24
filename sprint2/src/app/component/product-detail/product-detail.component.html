@@ -60,54 +60,57 @@
   <br>
   <div class="row">
     <div class="col-2"></div>
-    <div class="col-8 row">
-      <div class="col-3">
-        <img src="https://tse4.mm.bing.net/th?id=OIP.ITrksrmE54O3dNyTLzkscgHaHa&pid=Api&P=0"
-             style="width: 350px;height: 350px">
+    <form [formGroup]="productForm">
+      <div class="col-8 row" >
+        <div class="col-3">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.ITrksrmE54O3dNyTLzkscgHaHa&pid=Api&P=0"
+               style="width: 350px;height: 350px">
+        </div>
+        <div class="col-6" style="margin-left: 50px">
+          <table>
+            <tr>
+              <th style="color: black">Tên Sản Phẩm :</th>
+              <td><input formControlName="productName"></td>
+            </tr>
+            <tr>
+              <th style="color: black">Thương hiệu :</th>
+<!--              <td><input formControlName="brand"></td>-->
+            </tr>
+            <tr>
+              <th style="color: black">Trạng thái :</th>
+              <td>Đang kinh doanh</td>
+            </tr>
+            <tr>
+              <th style="color: black">Hương vị :</th>
+              <td>
+                <select class="form-select">
+                  <option>Strawberry(dâu)</option>
+                  <option>Cafe Mocha(cà phê mocha)</option>
+                  <option>Socola(socola)</option>
+                  <option>Peanut Butter(bơ đậu phộng)</option>
+                  <option>Mint Chocola(socola bạc hà)</option>
+                  <option>Banana(chuối)</option>
+                  <option>Light Salted Caramel(caramel muối)</option>
+                </select>
+              </td>
+            </tr>
+          </table>
+          <br>
+          <b style="color: black">Mô tả sản phẩm :</b>
+          <input formControlName="productDescripe" style="width: 500px">
+          <br>
+          <b style="color: black">Giá sản phẩm :</b>
+          <br>
+          <b style="color: black" formControlName="productPrice"></b>
+          <br>
+          <br>
+          <button type="button" class="btn btn-outline-danger">Mua Sản Phẩm</button>
+          <button style="margin-left: 30px" type="button" class="btn btn-outline-primary">Liên hệ với chúng tôi</button>
+        </div>
+        <div class="col-3"></div>
       </div>
-      <div class="col-6" style="margin-left: 50px">
-        <table>
-          <tr>
-            <th style="color: black">Tên Sản Phẩm :</th>
-            <td>Rule 1 Protein 5 lbs</td>
-          </tr>
-          <tr>
-            <th style="color: black">Thương hiệu :</th>
-            <td>Rule 1</td>
-          </tr>
-          <tr>
-            <th style="color: black">Trạng thái :</th>
-            <td>Đang kinh doanh</td>
-          </tr>
-          <tr>
-            <th style="color: black">Hương vị :</th>
-            <td>
-              <select class="form-select">
-                <option>Strawberry(dâu)</option>
-                <option>Cafe Mocha(cà phê mocha)</option>
-                <option>Socola(socola)</option>
-                <option>Peanut Butter(bơ đậu phộng)</option>
-                <option>Mint Chocola(socola bạc hà)</option>
-                <option>Banana(chuối)</option>
-                <option>Light Salted Caramel(caramel muối)</option>
-              </select>
-            </td>
-          </tr>
-        </table>
-        <br>
-        <b style="color: black">Mô tả sản phẩm :</b>
-        <p>Rule 1 Protein không có chất béo, tinh bột, hoặc cholesterol - và không bột kem thêm hoặc gums được thêm vào
-          giống các sản phẩm protein khác, duy trì khối lượng tế bào và hỗ trợ phục hồi cơ.</p>
-        <b style="color: black">Giá sản phẩm :</b>
-        <br>
-        <b style="color: black">1.670.000 đ</b>
-        <br>
-        <br>
-        <button type="button" class="btn btn-outline-danger">Mua Sản Phẩm</button>
-        <button style="margin-left: 30px" type="button" class="btn btn-outline-primary">Liên hệ với chúng tôi</button>
-      </div>
-      <div class="col-3"></div>
-    </div>
+    </form>
+
     <div class="col-2">
       <table>
         <tr>

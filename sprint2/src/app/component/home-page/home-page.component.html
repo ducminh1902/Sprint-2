@@ -3,7 +3,10 @@
     <div class="col-2"><p style="margin-left: 180px;padding-top: 7px">Hotline:077.946.9245</p></div>
     <div class="col-3"><p style="margin-left: 180px;padding-top: 7px">Ghé Fanpage</p></div>
     <div class="col-7">
-      <p style="margin-left: 500px;padding-top: 7px">HỆ THỐNG 7 CỬA HÀNG</p>
+      <p style="margin-left: 300px;padding-top: 7px">HỆ THỐNG 7 CỬA HÀNG  <span style="margin-left: 30px;color: red" *ngIf="isLogged">{{user.name}}</span>
+      <button style="margin-left: 30px" *ngIf="isLogged" (click)="logout()">Đăng xuất</button>
+      <button style="margin-left: 30px" *ngIf="!isLogged" routerLink="/login">Đăng nhập</button>
+      </p>
     </div>
   </div>
   <div style="background: white;height: 100px" class="row">

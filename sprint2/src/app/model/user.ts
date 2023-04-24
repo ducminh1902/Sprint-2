@@ -1,6 +1,8 @@
 export interface User {
   id?:number;
-  userName?: string;
+  name?: string;
+  password?:string;
+  userName?:string;
   dateOfBirth?:string;
   gender?:number;
   address?:string;

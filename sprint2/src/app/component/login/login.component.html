@@ -44,10 +44,16 @@
               </a>
             </div>
             <span>hoặc sử dụng tài khoản của bạn</span>
-            <input type="email" placeholder="Tên đăng nhập"/>
-            <input type="password" placeholder="Mật khẩu"/>
-            <a href="#">Quên mật khẩu?</a>
-            <button>Đăng nhập</button>
+            <form [formGroup]="form" (ngSubmit)="login()">
+
+            <input type="email" formControlName="username" placeholder="Tên đăng nhập"/>
+            <input type="password" formControlName="password" placeholder="Mật khẩu"/>
+            <span style="color: red">{{message}}</span>
+              <div class="d-flex" style="width: 200px">
+              <input type="checkbox" formControlName="rememberMe" style="width: 40px;"> <span style="padding-top: 5px"> Ghi nhớ đăng nhập.</span></div>
+            <button type="submit">Đăng nhập</button>
+            </form>
+
           </form>
         </div>
       </div>
